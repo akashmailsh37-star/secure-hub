@@ -25,16 +25,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/95" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 py-16 md:py-24">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Technical Support Services
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Professional assistance for your antivirus and security software
-            </p>
-          </div>
-        </div>
+        
       </section>
 
       {/* Main Content */}
