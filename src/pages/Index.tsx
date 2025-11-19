@@ -1,6 +1,7 @@
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-support.jpg";
@@ -41,72 +42,54 @@ const Index = () => {
         {/* Support Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
           {/* Norton Support Card */}
-          <Card className="border-2 hover:shadow-lg transition-shadow overflow-hidden">
-            <CardHeader className="text-center pb-4">
-              <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-2 border-border">
-                <img 
-                  src={nortonImage} 
-                  alt="Norton Antivirus Support" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardTitle className="text-2xl mb-2">Norton Users</CardTitle>
-              <CardDescription className="text-base">
-                Get expert help with Norton antivirus, security, and installation issues
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <div className="bg-secondary rounded-lg p-6 mb-4">
-                <p className="text-sm text-muted-foreground mb-2">Toll-Free Support</p>
-                <a
-                  href={`tel:${phoneNumber}`}
-                  className="text-3xl font-bold text-primary hover:text-primary/90 transition-colors"
-                >
-                  {phoneNumber}
-                </a>
-              </div>
-              <Button asChild size="lg" className="w-full">
-                <a href={`tel:${phoneNumber}`}>
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Now
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+          <Link to="/norton-support">
+            <Card className="border-2 hover:shadow-xl hover:border-primary/50 transition-all cursor-pointer overflow-hidden h-full">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-2 border-border">
+                  <img 
+                    src={nortonImage} 
+                    alt="Norton Antivirus Support" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="text-2xl mb-2">Norton Support</CardTitle>
+                <CardDescription className="text-base">
+                  Get expert help with Norton antivirus, security, and installation issues
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button variant="outline" size="lg" className="w-full group">
+                  View Norton Support
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Card>
+          </Link>
 
           {/* McAfee Support Card */}
-          <Card className="border-2 hover:shadow-lg transition-shadow overflow-hidden">
-            <CardHeader className="text-center pb-4">
-              <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-2 border-border">
-                <img 
-                  src={mcafeeImage} 
-                  alt="McAfee Antivirus Support" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <CardTitle className="text-2xl mb-2">McAfee Users</CardTitle>
-              <CardDescription className="text-base">
-                Professional support for McAfee antivirus, security, and troubleshooting
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <div className="bg-secondary rounded-lg p-6 mb-4">
-                <p className="text-sm text-muted-foreground mb-2">Toll-Free Support</p>
-                <a
-                  href={`tel:${phoneNumber}`}
-                  className="text-3xl font-bold text-primary hover:text-primary/90 transition-colors"
-                >
-                  {phoneNumber}
-                </a>
-              </div>
-              <Button asChild size="lg" className="w-full">
-                <a href={`tel:${phoneNumber}`}>
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Now
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
+          <Link to="/mcafee-support">
+            <Card className="border-2 hover:shadow-xl hover:border-primary/50 transition-all cursor-pointer overflow-hidden h-full">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto mb-4 w-24 h-24 rounded-full overflow-hidden border-2 border-border">
+                  <img 
+                    src={mcafeeImage} 
+                    alt="McAfee Antivirus Support" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <CardTitle className="text-2xl mb-2">McAfee Support</CardTitle>
+                <CardDescription className="text-base">
+                  Professional support for McAfee antivirus, security, and troubleshooting
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button variant="outline" size="lg" className="w-full group">
+                  View McAfee Support
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
 
         {/* Services Section */}
